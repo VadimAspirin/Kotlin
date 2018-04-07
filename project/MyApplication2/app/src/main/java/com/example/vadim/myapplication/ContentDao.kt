@@ -11,5 +11,8 @@ interface ContentDao {
     fun getAll(): List<Content>
 
     @Insert
-    fun insertAll(content: List<Content>)
+    fun insertAll(Content: List<Content>)
+
+    @Query("DELETE FROM Content")
+    fun deleteAll()
 }

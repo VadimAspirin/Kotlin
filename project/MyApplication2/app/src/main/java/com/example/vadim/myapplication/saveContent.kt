@@ -5,10 +5,10 @@ import kotlinx.coroutines.experimental.Deferred
 import kotlinx.coroutines.experimental.async
 import kotlin.coroutines.experimental.CoroutineContext
 
-fun savePhotos(
+fun saveContent(
         app: App,
-        photos: List<Content>,
+        content: List<Content>,
         coroutineContext: CoroutineContext = CommonPool
 ): Deferred<Unit> = async(coroutineContext) {
-    app.database.contentDao().insertAll(photos)
+    app.database.contentDao().insertAll(content)
 }
